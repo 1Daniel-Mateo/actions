@@ -10,5 +10,5 @@ person:
     - item3
 
 scripts: |
-    touch hola.txt
-    echo "Hola";
+  touch hola.txt
+  echo "Hola";

@@ -1,0 +1,16 @@
+key: Hola Mundo
+
+person:
+    name: Juan
+    age: 30
+    city: Bogota
+    items:
+        - item1
+        - item2
+        - item3
+
+
+scripts: |
+    touch hola.txt
+    echo "Hola";
+    

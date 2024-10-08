@@ -1,14 +1,12 @@
-key: Hola Mundo
+name: Hola Mundo
 
-person:
-  name: Juan
-  age: 30
-  city: Bogota
-  items:
-    - item1
-    - item2
-    - item3
+on: [push]
 
-scripts: |
-  touch hola.txt
-  echo "Hola";
+
+jobs:
+  hola:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hola Mundo
+        run: echo 'Hola Mundo'

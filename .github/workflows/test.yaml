@@ -38,3 +38,18 @@ jobs:
     - name: LS
       run: touch hola.txt
 
+  paquete:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # plugin checkout de git hub intregrado
+    - name: Checkout
+      uses: actions/checkout@v4.2.1
+      #Llamada para agregar el paquete en el archivo instalar.sh 
+    - name: ls
+      run: |
+        chmod  +x instalar.sh
+        ./instalar.sh
+
+
+

@@ -1,0 +1,22 @@
+name: "My action"
+description: "Test my action"
+
+# input que usamos para asignar un parametro
+inputs:
+# nombre  del parametro
+  message:
+  #  tipo de dato que espera el parametro
+    description: "The message to display"
+    required: true
+    default: "Hello, world!"
+
+runs:
+  using: "composite"
+
+# la accion  se ejecuta en un contenedor de composite
+  steps:
+    - name: Prueba
+    #  el contenedor se ejecuta en un contenedor de composite
+      run: echo  "${{inputs.message}}"
+      # el shell  es bash
+      shell: bash

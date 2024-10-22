@@ -1,0 +1,19 @@
+name: Ejemplo de Composite action
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_ROOT_PASSWORD: example
+        ports:
+          - 3306:3306
+
+    steps:
+      - name: Test
+        run: ls
